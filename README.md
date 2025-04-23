@@ -75,13 +75,13 @@ python scripts/predict_gradio.py
 > 以下截图请替换为你本地或图床的实际路径
 
 ### ▶️ 单条影评情感预测  
-![单条预测](![image](https://github.com/user-attachments/assets/5a7b9596-911c-4c00-9b0e-fb834bf5567a))
+[image](https://github.com/user-attachments/assets/5a7b9596-911c-4c00-9b0e-fb834bf5567a)
 
-### 📁 批量影评预测（上传 CSV）  
-![批量预测](![image](https://github.com/user-attachments/assets/325f57a0-72b8-43a5-b3d2-a38ef593decd))
+### 📁 批量影评预测（上传 CSV） 
+[image](https://github.com/user-attachments/assets/325f57a0-72b8-43a5-b3d2-a38ef593decd)
 
 ### 📈 情感分布图表  
-![概率分布图](![image](https://github.com/user-attachments/assets/a6d7f91a-d4a6-4b9d-9d2e-29d24223d5cb))
+[image](https://github.com/user-attachments/assets/a6d7f91a-d4a6-4b9d-9d2e-29d24223d5cb)
 
 ---
 
