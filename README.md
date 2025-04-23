@@ -26,25 +26,25 @@ IMDb/ ├── data/ # 原始和清洗后的数据 │ └── imdb_train_cle
 pip install -r requirements.txt
 如果没有 requirements.txt，你可以手动安装：
 pip install pandas scikit-learn gradio plotly joblib
-🚀 使用方法
-1️⃣ 数据清洗
+##🚀 使用方法
+###1️⃣ 数据清洗
 python scripts/clean_text.py
-2️⃣ 训练模型
+###2️⃣ 训练模型
 python scripts/train_model.py
-3️⃣ 命令行预测
+###3️⃣ 命令行预测
 python scripts/predict_cli.py --text "This movie is fantastic!"
-4️⃣ 启动 Web 界面
+####4️⃣ 启动 Web 界面
 python scripts/predict_gradio.py
-📊 示例截图
+##📊 示例截图
 ![image](https://github.com/user-attachments/assets/64d9b86f-4ebc-48a5-b205-f61bc06ddae4)
 ![image](https://github.com/user-attachments/assets/f51ed67c-0a58-4eb7-88ba-5f92bf48bf75)
 ![image](https://github.com/user-attachments/assets/432f4aec-9624-4e07-a41f-1f5368cfc1bd)
-💡 项目进阶建议
+##💡 项目进阶建议
 尝试引入深度学习模型（如 BERT）提升效果
 加入模型部署（如 FastAPI + Docker）
 增加多语言支持或用户登录功能
-📚 数据来源
+##📚 数据来源
 IMDb 数据集（Hugging Face）
-📄 许可证
+##📄 许可证
 本项目仅用于学习与研究目的，未经许可请勿用于商业用途。
 
