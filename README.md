@@ -1,36 +1,50 @@
-# IMDb评论情感分析模型与Gradio Web界面
+# 🎬 IMDb 电影评论情感分类系统
 
-该项目是一个针对IMDb电影评论的情感分析模型，使用Python和Gradio构建。模型对IMDb的电影评论进行情感分析，并提供一个用户友好的Web界面，供用户进行互动。它包含了以下三个主要功能部分：
+本项目基于 IMDb 电影评论数据集，构建了一个完整的情感分类系统，能够识别评论是 “正面” 还是 “负面”。该系统结合了传统机器学习方法与现代 Web 接口，适合初学者学习自然语言处理（NLP）项目全流程。
 
-1. **单条情感预测**：用户可以输入单条评论，模型将预测评论的情感是正面还是负面。
-2. **批量情感预测**：用户可以上传一个包含多条评论的CSV文件，模型将为每条评论进行情感预测。
-3. **情感概率分布图**：模型生成每条评论的情感概率分布图，帮助用户理解情感预测的置信度。
+## ✨ 项目功能亮点
 
-## 功能
+- **自动数据预处理**：清洗文本内容，规范大小写，去除噪声词。
+- **模型训练与评估**：基于 TF-IDF 向量化 + 逻辑回归模型，准确率达 88.6%。
+- **命令行接口**：输入任意文本即可获取情感预测结果。
+- **图形化 Web 界面（Gradio）**：
+  - 单条影评预测
+  - 支持上传 CSV 文件进行批量预测
+  - 可视化情感分布图（Plotly）
+- **可部署性强**：模型与向量器已持久化保存，适用于后续部署或迁移。
 
-### 1. 单条情感预测
+## 🗂️ 项目结构
 
-- **描述**：输入一条IMDb评论，模型将预测该评论是正面还是负面。
-- **输入**：一条文本字符串（IMDb评论）。
-- **输出**：情感标签（正面/负面）以及情感预测概率。
+IMDb/ ├── data/ # 原始和清洗后的数据 │ └── imdb_train_clean.csv ├── models/ # 保存的模型和向量器 │ ├── logistic_model.pkl │ └── tfidf_vectorizer.pkl ├── scripts/ # 各功能脚本 │ ├── clean_text.py # 数据清洗 │ ├── train_model.py # 模型训练 │ ├── predict_cli.py # 命令行预测 │ └── predict_gradio.py # 图形化 Web 界面 ├── predictions.csv # 批量预测输出文件 └── README.md # 项目说明文件
 
-### 2. 批量情感预测
 
-- **描述**：上传一个包含多条IMDb评论的CSV文件，模型将处理该文件并为每条评论预测情感。
-- **输入**：一个CSV文件，其中每一行包含一条IMDb评论。
-- **输出**：一个包含每条评论情感预测的CSV文件。
+## 📦 安装依赖
 
-### 3. 情感概率分布图
+建议使用 [Anaconda](https://www.anaconda.com/) 或 venv 创建虚拟环境：
 
-- **描述**：对于每条评论，模型将提供一个情感的概率分布图，展示该评论为正面或负面的概率。
-- **输出**：一张展示情感分布的图表（柱状图或饼图），清晰显示模型的置信度。
+```bash
+pip install -r requirements.txt
+如果没有 requirements.txt，你可以手动安装：
+pip install pandas scikit-learn gradio plotly joblib
+🚀 使用方法
+1️⃣ 数据清洗
+python scripts/clean_text.py
+2️⃣ 训练模型
+python scripts/train_model.py
+3️⃣ 命令行预测
+python scripts/predict_cli.py --text "This movie is fantastic!"
+4️⃣ 启动 Web 界面
+python scripts/predict_gradio.py
+📊 示例截图
+![image](https://github.com/user-attachments/assets/64d9b86f-4ebc-48a5-b205-f61bc06ddae4)
+![image](https://github.com/user-attachments/assets/f51ed67c-0a58-4eb7-88ba-5f92bf48bf75)
+![image](https://github.com/user-attachments/assets/432f4aec-9624-4e07-a41f-1f5368cfc1bd)
+💡 项目进阶建议
+尝试引入深度学习模型（如 BERT）提升效果
+加入模型部署（如 FastAPI + Docker）
+增加多语言支持或用户登录功能
+📚 数据来源
+IMDb 数据集（Hugging Face）
+📄 许可证
+本项目仅用于学习与研究目的，未经许可请勿用于商业用途。
 
-## 安装
-
-要在本地运行该项目，请按照以下步骤操作：
-
-1. 克隆项目仓库：
-
-   ```bash
-   git clone https://github.com/whoc666/IMDb-Sentiment-Analysis.git
-   cd IMDb-Sentiment-Analysis
