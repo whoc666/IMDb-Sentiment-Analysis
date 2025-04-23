@@ -31,8 +31,7 @@ IMDb/
 │   ├── clean_text.py        # 数据清洗  
 │   ├── train_model.py       # 模型训练  
 │   ├── predict_cli.py       # 命令行预测  
-│   └── predict_gradio.py    # 图形化 Web 界面  
-├── predictions.csv          # 批量预测输出文件  
+│   └── predict_gradio.py    # 图形化 Web 界面加批量预测   
 └── README.md                # 项目说明文件
 ```
 
